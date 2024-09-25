@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "__MSG_extensionDescription__",
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "main_page.html"
   },
   "default_locale": "en",
   "permissions": [
