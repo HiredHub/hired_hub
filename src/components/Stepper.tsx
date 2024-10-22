@@ -1,8 +1,14 @@
-function Stepper() {
+import Opportunity from "../model/Opportunity";
+
+interface Props {
+  opportunity: Opportunity;
+}
+function Stepper({ opportunity }: Props) {
   return (
     <>
+      <div className="p-4">
       <h6 className="text-sm font-medium text-gray-900 dark:text-white text-left">
-        Java Developer - Google
+        {opportunity.getName()} - {opportunity.getCompany()} - {opportunity.getStatus()}
       </h6>
       <ol className="flex items-center w-full">
         <li className="flex w-full items-center text-blue-600 dark:text-blue-500 after:content-[''] after:w-full after:h-1 after:border-b after:border-blue-100 after:border-4 after:inline-block dark:after:border-blue-800">
@@ -40,6 +46,7 @@ function Stepper() {
           </h4>
         </li>
       </ol>
+      </div>
     </>
   );
 }
